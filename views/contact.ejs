@@ -1,0 +1,21 @@
+<%- include('header.ejs') %>
+<div class="container main-container p-2 mt-4">
+  <main>
+    <h1>Contacto</h1>
+    <p>
+      ¡Me encantaría saber de ti! Puedes contactarme de las siguientes maneras:
+    </p>
+    <ul>
+      <% for (let key in contacto) { %>
+        <% if (key === '1') { %>
+            <li>Mi correo es: <%= contacto[key] %></li>
+        <% } else if (key === '2') { %>
+            <li>Mi Linkedln: <%= contacto[key] %></li>
+        <% } else if (key === '3') { %>
+            <li>Mi github: <a href=""><%= contacto[key] %></a></li>
+        <% } %>
+      <% } %>
+    </ul>
+  </main>
+</div>
+<%- include('footer.ejs') %>

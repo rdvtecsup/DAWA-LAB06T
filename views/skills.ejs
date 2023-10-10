@@ -1,0 +1,13 @@
+<%- include('header.ejs') %>
+<div class="container main-container p-2 mt-4">
+  <main>
+    <h1>Mis Habilidades</h1>
+    <p>Especialidad: <a><%= especialidad %></a></p>
+    <ul>
+      <% for (let key in conocimientos) { %>
+      <li><%= conocimientos[key] %></li>
+      <% } %>
+    </ul>
+  </main>
+</div>
+<%- include('footer.ejs') %>
